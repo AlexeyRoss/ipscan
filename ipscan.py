@@ -7,9 +7,9 @@ for port in mas:
   s = socket.socket()
   s.settimeout(1)
   try:
-    s.connect(host,port)
+    s.connect((host,port))
   except socket.error:
     pass
   else:
     s.close
-  print(host + ':' + str(port)+ 'active')
+    print(host + ':' + str(port)+ ' --active')
